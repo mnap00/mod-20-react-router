@@ -20,8 +20,12 @@ const Contact = () => <h1>Hello Contact Component!</h1>;
 const Navigation = props => (
     <div>
         <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
+            <li><Link to='/' activeStyle={{color: '#48abee'}} onlyActiveOnIndex>
+                    Home
+            </Link></li>
+            <li><Link to='/contact' activeStyle={{color: '#48abee'}}>
+                    Contact
+            </Link></li>
         </ul>
         {props.children}
     </div>
