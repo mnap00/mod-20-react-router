@@ -8,6 +8,7 @@ class App extends Component {
                 <Route path='/' component={Navigation}>
                     <IndexRoute component={Home} />
                     <Route path='/contact' component={Contact} />
+                    <Route path='/hello/:name' component={Hello} />
                     <Route path='*' component={PageNotFound} />
                 </Route>
             </Router>
@@ -17,6 +18,7 @@ class App extends Component {
 
 const Home = () => <h1>Hello Home Component!</h1>;
 const Contact = () => <h1>Hello Contact Component!</h1>;
+const Hello = (props) => <h1>Hello {props.params.name}</h1>;
 const Navigation = props => (
     <div>
         <ul>
