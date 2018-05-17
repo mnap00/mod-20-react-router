@@ -8,6 +8,7 @@ class App extends Component {
                 <Route path='/' component={Navigation}>
                     <IndexRoute component={Home} />
                     <Route path='/contact' component={Contact} />
+                    <Route path='*' component={PageNotFound} />
                 </Route>
             </Router>
         );
@@ -25,5 +26,6 @@ const Navigation = props => (
         {props.children}
     </div>
 );
+const PageNotFound = () => <h1>404 Not Found</h1>;
 
 export default App;
